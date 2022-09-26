@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'rest_framework',
     'ideas.apps.IdeasConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -77,8 +78,12 @@ WSGI_APPLICATION = 'youtube.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'youtube',
+        'USER': 'youtube',
+        'PASSWORD':'youtube123',
+        'HOST':'db',
+        'PORT':'5432',
     }
 }
 
